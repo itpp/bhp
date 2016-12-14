@@ -130,7 +130,7 @@ def server_loop():
 		client_socket, addr = server.accept()
 
 		# spin off a thread to handle our new client
-		client_thread - threading.Thread(target=client_handler, args=(client_socket,))
+		client_thread = threading.Thread(target=client_handler, args=(client_socket,))
 		client_thread.start()
 
 def run_command(command):
