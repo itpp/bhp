@@ -38,3 +38,6 @@ def main():
 
 	if not len(sys.argv[1:]):
 		usage()
+
+
+main()
