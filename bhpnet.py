@@ -41,7 +41,7 @@ def main():
 
 	# read command line options
 	try:
-		opts, args = getopt.getopt(sys.argv[1:],"hle:t:p:cu:",["help","listen","execute","target","port","command","upload"])
+		opts, args = getopt.getopt(sys.argv[1:],["h","l","e","t","p","c","u"],["help","listen","execute","target","port","command","upload"])
 	except getopt.GetoptError as err:
 		print str(err)
 		usage()
@@ -200,6 +200,6 @@ def client_handler(client_socket):
 
 			# send back the response
 			client_socket.send(response)
-			
+
 
 main()
